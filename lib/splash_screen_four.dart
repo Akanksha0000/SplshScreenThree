@@ -8,7 +8,7 @@ class SplashScreenFour extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final double textScaleFactor = size.width / 375;
+    final double textScaleFactor = size.width / 380;
 
     return Scaffold(
       backgroundColor: Color(0xFF1A1A1A),
@@ -24,13 +24,12 @@ class SplashScreenFour extends StatelessWidget {
             fit: StackFit.expand,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 40),
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 child: _buildBackgroundTexts(size),
               ),
-
               Positioned.fill(
                 child: Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
@@ -38,11 +37,17 @@ class SplashScreenFour extends StatelessWidget {
                         Colors.transparent,
                         Colors.transparent,
                         Colors.transparent,
-                        Color.fromARGB(255, 123, 62, 43),
-                        Color.fromARGB(255, 240, 101, 62)
+                        Colors.transparent,
+                        Color(0xFF89bbf0).withOpacity(0.3),
+                        Color(0xf7236ad4),
+                        Color(0xFD1646C0),
                       ],
+
                     ),
-                    borderRadius: BorderRadius.all(Radius.circular(16)),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(90),
+                      topRight: Radius.circular(90),
+                    ),
                   ),
                 ),
               ),
@@ -85,24 +90,24 @@ class SplashScreenFour extends StatelessWidget {
                           fit: BoxFit.scaleDown,
                           child: Column(
                             children: [
-                              textBase('LIVE YOUR',context),
+                              textBase('WHERE IDEAS',context),
                               SizedBox(height:10,),
-                              textBase('PERFECT',context),
+                              textBase('LAUNCH',context),
                               SizedBox(height:25),
                               Text(
-                                'Smart, gorgeous & fashionable',
+                                'Fuel innovation by sharing, discovering,',
                                 style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 17
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 14
                                 ),
                                 textAlign: TextAlign.center,
                               ),
                               Text(
-                                'collection makes you cool',
+                                'and collaborating worldwide',
                                 style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 17
+                                    color: Colors.white,
+                                    fontSize: 14
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -128,9 +133,9 @@ class SplashScreenFour extends StatelessWidget {
                               'Get Started',
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 17,
-                                fontWeight: FontWeight.w500
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600
 
                               ),
                             ),
@@ -152,9 +157,9 @@ class SplashScreenFour extends StatelessWidget {
     return Text(text,
       style: TextStyle(
           color: Colors.white,
-          fontSize: 50 * MediaQuery.of(context).size.width / 375,
+          fontSize: 48 * MediaQuery.of(context).size.width / 375,
           fontWeight: FontWeight.w900,
-          letterSpacing: 2,
+          letterSpacing: 0.1,
           height: 0.8
       ),
       textAlign: TextAlign.center,
@@ -165,19 +170,19 @@ class SplashScreenFour extends StatelessWidget {
   Widget _buildBackgroundTexts(Size size) {
     final double baseSize = size.width;
     final List<double> positions = [
-      0.02,
-      0.24,0.46,0.62
+      0.06,
+      0.28,0.5,0.72
     ]; // Relative positions
 
     return Stack(
-      alignment: Alignment.center,
+      // alignment: Alignment.center,
       children: positions.map((position) {
         return Positioned(
           top: size.height * position,
           left: 0,
           right: 0,
           child: Transform(
-            transform: Matrix4.identity()..scale(1.6, 1.0),
+            transform: Matrix4.identity()..scale(1.6, 0.9),
             alignment: Alignment.center,
             child: Text(
               'IDEA',
@@ -186,7 +191,7 @@ class SplashScreenFour extends StatelessWidget {
                 textStyle: TextStyle(
                   fontSize: 120,
                   // fontWeight: FontWeight.w900,
-                  letterSpacing: 10,
+                  letterSpacing: 6,
                   foreground: Paint()
                     ..style = PaintingStyle.stroke
                     ..strokeWidth = 2
