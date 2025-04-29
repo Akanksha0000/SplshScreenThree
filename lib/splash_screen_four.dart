@@ -74,6 +74,11 @@ class SplashScreenFour extends StatelessWidget {
                                 //   width: size.width * 0.8,
                                 //   fit: BoxFit.contain,
                                 // ),
+                                // Image.asset(
+                                //   'assets/images/img.png',
+                                //   width: size.width * 0.8,
+                                //   fit: BoxFit.contain,
+                               // ),
                               ],
                             ),
                           ),
@@ -90,24 +95,24 @@ class SplashScreenFour extends StatelessWidget {
                           fit: BoxFit.scaleDown,
                           child: Column(
                             children: [
-                              textBase('WHERE IDEAS',context),
+                              textBase('Ideas Without',context),
                               SizedBox(height:10,),
-                              textBase('LAUNCH',context),
+                              textBase('Limits',context),
                               SizedBox(height:25),
                               Text(
-                                'Fuel innovation by sharing, discovering,',
+                                'No borders,No barriers',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 14
+                                    fontSize: 15
                                 ),
                                 textAlign: TextAlign.center,
                               ),
                               Text(
-                                'and collaborating worldwide',
+                                'and just creativity',
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 14
+                                    fontSize: 1
                                 ),
                                 textAlign: TextAlign.center,
                               ),
