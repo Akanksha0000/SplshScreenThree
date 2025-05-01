@@ -10,6 +10,7 @@ class SplashScreenFive extends StatelessWidget {
     final width = size.width;
     final height = size.height;
 
+
     return Scaffold(
       backgroundColor: Colors.black.withOpacity(0.6),
       body: Stack(

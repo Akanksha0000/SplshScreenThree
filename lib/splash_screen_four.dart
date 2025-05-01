@@ -20,6 +20,7 @@ class SplashScreenFour extends StatelessWidget {
           decoration: const BoxDecoration(
             color: Color(0xFF1A1A1A),
           ),
+
           child: Stack(
             fit: StackFit.expand,
             children: [
